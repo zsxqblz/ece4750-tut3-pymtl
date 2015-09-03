@@ -15,10 +15,10 @@ class SortUnitCL( Model ):
   def __init__( s, nbits=8, nstages=3 ):
 
     s.in_val  = InPort (1)
-    s.in_     = InPort [4](nbits)
+    s.in_     = [ InPort  (nbits) for _ in range(4) ]
 
     s.out_val = OutPort(1)
-    s.out     = OutPort[4](nbits)
+    s.out     = [ OutPort (nbits) for _ in range(4) ]
 
     s.pipe    = deque( [[0,0,0,0,0]]*(nstages-1) )
 

@@ -64,64 +64,64 @@ class GcdUnitDpathRTL (Model):
     s.b_reg_out = Wire(16)
 
     s.a_mux = m = Mux( 16, 3 )
-    s.connect_dict({
-      m.sel                  : s.a_mux_sel,
-      m.in_[ A_MUX_SEL_IN  ] : s.req_msg_a,
-      m.in_[ A_MUX_SEL_SUB ] : s.sub_out,
-      m.in_[ A_MUX_SEL_B   ] : s.b_reg_out,
-    })
+    s.connect_pairs(
+      m.sel,                  s.a_mux_sel,
+      m.in_[ A_MUX_SEL_IN  ], s.req_msg_a,
+      m.in_[ A_MUX_SEL_SUB ], s.sub_out,
+      m.in_[ A_MUX_SEL_B   ], s.b_reg_out,
+    )
 
     # A register
 
     s.a_reg = m = RegEn(16)
-    s.connect_dict({
-      m.en    : s.a_reg_en,
-      m.in_   : s.a_mux.out,
-    })
+    s.connect_pairs(
+      m.en,  s.a_reg_en,
+      m.in_, s.a_mux.out,
+    )
 
     # B mux
 
     s.b_mux = m = Mux( 16, 2 )
-    s.connect_dict({
-      m.sel                 : s.b_mux_sel,
-      m.in_[ B_MUX_SEL_A  ] : s.a_reg.out,
-      m.in_[ B_MUX_SEL_IN ] : s.req_msg_b,
-    })
+    s.connect_pairs(
+      m.sel,                 s.b_mux_sel,
+      m.in_[ B_MUX_SEL_A  ], s.a_reg.out,
+      m.in_[ B_MUX_SEL_IN ], s.req_msg_b,
+    )
 
     # B register
 
     s.b_reg = m = RegEn(16)
-    s.connect_dict({
-      m.en    : s.b_reg_en,
-      m.in_   : s.b_mux.out,
-      m.out   : s.b_reg_out,
-    })
+    s.connect_pairs(
+      m.en,  s.b_reg_en,
+      m.in_, s.b_mux.out,
+      m.out, s.b_reg_out,
+    )
 
     # Zero compare
 
     s.b_zero = m = ZeroComparator(16)
-    s.connect_dict({
-      m.in_ : s.b_reg.out,
-      m.out : s.is_b_zero,
-    })
+    s.connect_pairs(
+      m.in_, s.b_reg.out,
+      m.out, s.is_b_zero,
+    )
 
     # Less-than comparator
 
     s.a_lt_b = m = LtComparator(16)
-    s.connect_dict({
-      m.in0 : s.a_reg.out,
-      m.in1 : s.b_reg.out,
-      m.out : s.is_a_lt_b
-    })
+    s.connect_pairs(
+      m.in0, s.a_reg.out,
+      m.in1, s.b_reg.out,
+      m.out, s.is_a_lt_b
+    )
 
     # Subtractor
 
     s.sub = m = Subtractor(16)
-    s.connect_dict({
-      m.in0 : s.a_reg.out,
-      m.in1 : s.b_reg.out,
-      m.out : s.sub_out,
-    })
+    s.connect_pairs(
+      m.in0, s.a_reg.out,
+      m.in1, s.b_reg.out,
+      m.out, s.sub_out,
+    )
 
     # connect to output port
 

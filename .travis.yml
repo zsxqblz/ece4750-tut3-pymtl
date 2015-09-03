@@ -30,7 +30,7 @@ install:
 
  # Install PyMTL
 
- - pip -q install git+https://github.com/cornell-brg/pymtl.git
+ - pip -q install git+https://github.com/cornell-brg/pymtl.git@ece4750
 
 #------------------------------------------------------------------------
 # before test runner
@@ -48,5 +48,5 @@ before_script:
 #------------------------------------------------------------------------
 
 script:
- - py.test .. --tb=no -r Ew
+ - py.test ..
 

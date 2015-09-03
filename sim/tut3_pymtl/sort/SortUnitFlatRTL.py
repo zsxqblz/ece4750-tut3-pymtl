@@ -20,17 +20,17 @@ class SortUnitFlatRTL( Model ):
     #---------------------------------------------------------------------
 
     s.in_val  = InPort (1)
-    s.in_     = InPort [4](nbits)
+    s.in_     = [ InPort  (nbits) for _ in range(4) ]
 
     s.out_val = OutPort(1)
-    s.out     = OutPort[4](nbits)
+    s.out     = [ OutPort (nbits) for _ in range(4) ]
 
     #---------------------------------------------------------------------
     # Stage S0->S1 pipeline registers
     #---------------------------------------------------------------------
 
     s.val_S1 = Wire(1)
-    s.elm_S1 = Wire[4](nbits)
+    s.elm_S1 = [ Wire(nbits) for _ in range(4) ]
 
     @s.tick_rtl
     def pipereg_S0S1():
@@ -42,7 +42,7 @@ class SortUnitFlatRTL( Model ):
     # Stage S1 combinational logic
     #---------------------------------------------------------------------
 
-    s.elm_next_S1 = Wire[4](nbits)
+    s.elm_next_S1 = [ Wire(nbits) for _ in range(4) ]
 
     @s.combinational
     def stage_S1():
@@ -70,7 +70,7 @@ class SortUnitFlatRTL( Model ):
     #---------------------------------------------------------------------
 
     s.val_S2 = Wire(1)
-    s.elm_S2 = Wire[4](nbits)
+    s.elm_S2 = [ Wire(nbits) for _ in range(4) ]
 
     @s.tick_rtl
     def pipereg_S1S2():
@@ -82,7 +82,7 @@ class SortUnitFlatRTL( Model ):
     # Stage S2 combinational logic
     #----------------------------------------------------------------------
 
-    s.elm_next_S2 = Wire[4](nbits)
+    s.elm_next_S2 = [ Wire(nbits) for _ in range(4) ]
 
     @s.combinational
     def stage_S2():
@@ -110,7 +110,7 @@ class SortUnitFlatRTL( Model ):
     #----------------------------------------------------------------------
 
     s.val_S3 = Wire(1)
-    s.elm_S3 = Wire[4](nbits)
+    s.elm_S3 = [ Wire(nbits) for _ in range(4) ]
 
     @s.tick_rtl
     def pipereg_S2S3():
@@ -122,7 +122,7 @@ class SortUnitFlatRTL( Model ):
     # Stage S3 combinational logic
     #----------------------------------------------------------------------
 
-    s.elm_next_S3 = Wire[4](nbits)
+    s.elm_next_S3 = [ Wire(nbits) for _ in range(4) ]
 
     @s.combinational
     def stage_S3():
