@@ -30,7 +30,7 @@ class RegIncr( Model ):
         s.reg_out.next = s.in_
 
     # ''' TUTORIAL TASK '''''''''''''''''''''''''''''''''''''''''''''''''''
-    # This model is incomplete. As part of the tutorial you will add a
+    # This model is incomplete. As part of the tutorial you will aadd a
     # combinational concurrent block to model the incrementer logic, and
     # later you will a line tracing function to compactly output the
     # input, register, and output vaules.
