@@ -34,5 +34,5 @@ class RegIncr( Model ):
     # combinational concurrent block here to model the incrementer logic,
     # and later you will insert a line tracing function to compactly
     # output the input, register, and output values.
-    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
 

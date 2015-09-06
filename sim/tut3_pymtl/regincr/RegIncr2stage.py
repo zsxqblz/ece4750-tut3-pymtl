@@ -29,7 +29,7 @@ class RegIncr2stage( Model ):
     # This model is incomplete. As part of the tutorial you will insert
     # code here to instantiate and then connect the second stage of this
     # two-stage registered incrementer.
-    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
 
   # Line tracing
 

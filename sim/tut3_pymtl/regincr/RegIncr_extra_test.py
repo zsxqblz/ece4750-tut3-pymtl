@@ -38,5 +38,5 @@ def test_large( dump_vcd ):
 # This test script is incomplete. As part of the tutorial you will add
 # another test case to test for overflow. Later you will add a test case
 # for random testing.
-# ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
 
