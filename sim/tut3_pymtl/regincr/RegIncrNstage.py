@@ -26,15 +26,15 @@ class RegIncrNstage( Model ):
     s.connect( s.in_, s.reg_incrs[0].in_ )
 
     # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''
-    # This model is incomplete. As part of the tutorial you will add code
-    # to connect the stages together.
+    # This model is incomplete. As part of the tutorial you will insert
+    # code here to connect the stages together.
     # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     # Connect last reg_incr in chain to output port
 
     s.connect( s.reg_incrs[-1].out, s.out )
 
-  # Line Tracing
+  # Line tracing
 
   def line_trace( s ):
     return "{} ({}) {}".format(

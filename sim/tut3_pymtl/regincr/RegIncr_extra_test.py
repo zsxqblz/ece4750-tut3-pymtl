@@ -34,9 +34,9 @@ def test_large( dump_vcd ):
     [ 0x00, 0xc7 ],
   ], dump_vcd )
 
-# ''' TUTORIAL TASK '''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This test script is incomplete. As part of the tutorial you will add
 # another test case to test for overflow. Later you will add a test case
 # for random testing.
-# '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 

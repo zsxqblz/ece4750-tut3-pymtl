@@ -22,5 +22,5 @@ def test( test_params, dump_vcd, test_verilog ):
   run_sim( TestHarness( GcdUnitRTL,
                         test_params.msgs[::2], test_params.msgs[1::2],
                         test_params.src_delay, test_params.sink_delay,
-                        dump_vcd, test_verilog ) )
+                        dump_vcd, test_verilog ), dump_vcd )
 

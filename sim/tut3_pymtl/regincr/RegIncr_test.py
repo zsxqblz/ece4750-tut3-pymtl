@@ -49,9 +49,9 @@ def test_basic( dump_vcd ):
 
     sim.cycle()
 
-  # ''' TUTORIAL TASK '''''''''''''''''''''''''''''''''''''''''''''''''''''
-  # This test script is incomplete. As part of the tutorial you will add
-  # a sequence of test cases to set the input and verify the output of
-  # the registered incrementer.
-  # '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''''
+  # This test script is incomplete. As part of the tutorial you will
+  # insert a sequence of test cases that use the above helper function to
+  # set the input and verify the output of the registered incrementer.
+  # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 

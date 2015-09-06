@@ -17,10 +17,13 @@ input_values.extend( [0]*3 )
 
 # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This simulator script is incomplete. As part of the tutorial you will
-# need to add the code for constructing and elaborating a RegIncr model
-# before using the SimulationTool to create a simulator. Later in the
-# tutorial you will nee to add a line to enable VCD dumping.
+# insert code here for constructing and elaborating a RegIncr model
+# before using the SimulationTool to create a simulator.
 # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# Create a simulator using simulation tool
+
+sim = SimulationTool( model )
 
 # Reset simulator
 

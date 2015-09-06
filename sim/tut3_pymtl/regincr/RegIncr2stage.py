@@ -26,12 +26,12 @@ class RegIncr2stage( Model ):
     s.connect( s.in_, s.reg_incr_0.in_ )
 
     # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''
-    # This model is incomplete. As part of the tutorial you will add code
-    # to connect the second stage of this two-stage registered
-    # incrementer.
+    # This model is incomplete. As part of the tutorial you will insert
+    # code here to instantiate and then connect the second stage of this
+    # two-stage registered incrementer.
     # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-  # Line Tracing
+  # Line tracing
 
   def line_trace( s ):
     return "{} ({}|{}) {}".format(

@@ -18,7 +18,7 @@ class RegIncr( Model ):
     s.in_ = InPort  ( Bits(8) )
     s.out = OutPort ( Bits(8) )
 
-    # Concurrent block modeling register
+    # Sequential logic
 
     s.reg_out = Wire( Bits(8) )
 
@@ -29,10 +29,10 @@ class RegIncr( Model ):
       else:
         s.reg_out.next = s.in_
 
-    # ''' TUTORIAL TASK '''''''''''''''''''''''''''''''''''''''''''''''''''
-    # This model is incomplete. As part of the tutorial you will aadd a
-    # combinational concurrent block to model the incrementer logic, and
-    # later you will a line tracing function to compactly output the
-    # input, register, and output vaules.
-    # '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # ''' TUTORIAL TASK ''''''''''''''''''''''''''''''''''''''''''''''''''
+    # This model is incomplete. As part of the tutorial you will insert a
+    # combinational concurrent block here to model the incrementer logic,
+    # and later you will insert a line tracing function to compactly
+    # output the input, register, and output values.
+    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
