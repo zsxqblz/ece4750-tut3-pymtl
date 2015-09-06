@@ -21,5 +21,5 @@ class MinMaxUnit( Model ):
     # This model is incomplete. As part of the tutorial you will insert
     # logic here to implement the min/max unit. You should also write a
     # unit test from scratch named MinMaxUnit_test.py.
-    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
+    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
