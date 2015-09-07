@@ -5,14 +5,24 @@
 import pytest
 
 def pytest_addoption(parser):
+
   parser.addoption( "--dump-vcd", action="store_true",
                     help="dump vcd for each test" )
+
   parser.addoption( "--dump-asm", action="store_true",
                     help="dump asm file for each test" )
+
   parser.addoption( "--dump-bin", action="store_true",
                     help="dump binary file for each test" )
+
   parser.addoption( "--test-verilog", action="store_true",
                     help="run verilog translation" )
+
+  parser.addoption( "--prtl", action="store_true",
+                    help="use PRTL implementations" )
+
+  parser.addoption( "--vrtl", action="store_true",
+                    help="use VRTL implementations" )
 
 def pytest_funcarg__dump_vcd(request):
   """Dump VCD for each test."""
@@ -44,4 +54,21 @@ def pytest_runtest_setup(item):
   test_verilog = item.config.option.test_verilog
   if test_verilog and 'test_verilog' not in item.funcargnames:
     pytest.skip("ignoring non-Verilog tests")
+
+def pytest_report_header(config):
+  if config.option.prtl:
+    return "forcing RTL language to be pymtl"
+  elif config.option.vrtl:
+    return "forcing RTL language to be verilog"
+
+# From:
+# https://pytest.org/latest/example/simple.html#detect-if-running-from-within-a-pytest-run
+
+def pytest_configure(config):
+  import sys
+  sys._called_from_test = True
+
+def pytest_unconfigure(config):
+  import sys
+  del sys._called_from_test
 
