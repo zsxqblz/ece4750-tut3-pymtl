@@ -15,7 +15,9 @@ def pytest_addoption(parser):
   parser.addoption( "--dump-bin", action="store_true",
                     help="dump binary file for each test" )
 
-  parser.addoption( "--test-verilog", action="store_true",
+  parser.addoption( "--test-verilog", action="store",
+                    default='', nargs='?', const='zeros',
+                    choices=[ '', 'zeros', 'ones', 'rand' ],
                     help="run verilog translation" )
 
   parser.addoption( "--prtl", action="store_true",

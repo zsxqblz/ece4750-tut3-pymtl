@@ -4,7 +4,7 @@
 
 from pymtl       import *
 from pclib.ifcs  import InValRdyBundle, OutValRdyBundle, valrdy_to_str
-from pclib.rtl   import Mux, RegEn, RegRst
+from pclib.rtl   import Mux, RegEn, RegRst, Reg
 from pclib.rtl   import LtComparator, ZeroComparator, Subtractor
 
 from GcdUnitMsg  import GcdUnitReqMsg
