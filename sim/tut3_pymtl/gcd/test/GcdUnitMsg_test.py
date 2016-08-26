@@ -4,7 +4,8 @@
 # Test suite for the GCD unit message
 
 from pymtl      import *
-from GcdUnitMsg import GcdUnitReqMsg
+
+from tut3_pymtl.gcd.GcdUnitMsg import GcdUnitReqMsg
 
 #-------------------------------------------------------------------------
 # test_fields

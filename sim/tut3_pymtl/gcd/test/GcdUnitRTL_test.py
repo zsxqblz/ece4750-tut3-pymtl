@@ -6,7 +6,8 @@ import pytest
 
 from pymtl      import *
 from pclib.test import run_sim
-from GcdUnitRTL import GcdUnitRTL
+
+from tut3_pymtl.gcd.GcdUnitRTL import GcdUnitRTL
 
 # Reuse tests from FL model
 
