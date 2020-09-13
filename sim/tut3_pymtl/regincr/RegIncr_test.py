@@ -54,4 +54,7 @@ def test_basic( dump_vcd ):
   # insert a sequence of test cases that use the above helper function to
   # set the input and verify the output of the registered incrementer.
   # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
+  t(0x00, '?')
+  t(0x02, 0x01)
+  t(0xfc, 0x03)
+  t(0x00, 0xfd)

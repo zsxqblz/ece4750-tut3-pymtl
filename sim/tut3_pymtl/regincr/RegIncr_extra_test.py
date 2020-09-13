@@ -40,3 +40,15 @@ def test_large( dump_vcd ):
 # for random testing.
 # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
+def test_random(dump_vcd):
+  input_list = []
+  for i in range(15):
+    input_list.append(int(i*16))
+  vec_table = []
+  vec_table.append(('in_', 'out*'))
+  vec_table.append([input_list[0], '?'])
+  for i in range(1, 15):
+    vec_table.append([input_list[i], input_list[i-1]+1])
+
+  print(vec_table)
+  run_test_vector_sim( RegIncr(), vec_table, dump_vcd )

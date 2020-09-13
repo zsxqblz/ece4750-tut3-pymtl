@@ -30,6 +30,10 @@ class RegIncr2stage( Model ):
     # code here to instantiate and then connect the second stage of this
     # two-stage registered incrementer.
     # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    s.reg_incr_1 = RegIncr()
+
+    s.connect(s.reg_incr_0.out, s.reg_incr_1.in_)
+    s.connect(s.reg_incr_1.out, s.out)
 
   # Line tracing
 

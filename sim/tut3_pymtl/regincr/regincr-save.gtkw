@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.76 (w)1999-2016 BSI
+[*] Thu Sep 10 01:53:21 2020
+[*]
+[dumpfile] "/home/yz2439/ECE4750/ece4750-tut3-pymtl/sim/tut3_pymtl/regincr/regincr-sim.vcd"
+[dumpfile_mtime] "Thu Sep 10 01:44:55 2020"
+[dumpfile_size] 802
+[savefile] "/home/yz2439/ECE4750/ece4750-tut3-pymtl/sim/tut3_pymtl/regincr/regincr-save.gtkw"
+[timestart] 0
+[size] 1280 701
+[pos] -1 -1
+*-11.000000 1200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 229
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 179
+@29
+top.clk
+@22
+top.in_[7:0]
+top.out[7:0]
+top.reg_out[7:0]
+@28
+top.reset
+[pattern_trace] 1
+[pattern_trace] 0

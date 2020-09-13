@@ -118,3 +118,26 @@ def test( test_params, dump_vcd ):
                         test_params.src_delay, test_params.sink_delay ),
            dump_vcd )
 
+#-------------------------------------------------------------------------
+# Coprime test cases
+#-------------------------------------------------------------------------
+
+corpime_msgs = [
+  mk_req_msg( 15,     7      ), 1,
+  mk_req_msg( 3,      2      ), 1,
+  mk_req_msg( 11,     19     ), 1,
+]
+
+coprime_case_table = mk_test_case_table([
+  (               "msgs        src_delay sink_delay"),
+  [ "basic_0x0",  corpime_msgs,  0,        0          ],
+  [ "basic_5x0",  corpime_msgs,  5,        0          ],
+  [ "basic_5x0",  corpime_msgs,  0,        5          ],
+])
+
+@pytest.mark.parametrize( **coprime_case_table )
+def test_coprime( test_params, dump_vcd ):
+  run_sim( TestHarness( GcdUnitFL,
+                        test_params.msgs[::2], test_params.msgs[1::2],
+                        test_params.src_delay, test_params.sink_delay ),
+           dump_vcd )
